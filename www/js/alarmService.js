@@ -1,10 +1,8 @@
 angular.module('nappy')
   .service('AlarmService', [
     function() {
-      return {
-        play: function() {
-          alert("hello");
-        }
-      };
+      this.play = function() {
+        alert("hello");
+      }
     }
 ]);
