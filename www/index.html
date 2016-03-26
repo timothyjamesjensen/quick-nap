@@ -20,6 +20,7 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/alarmService.js"></script>
   </head>
   <body ng-app="nappy" ng-controller="nappyCtrl">
     <ion-pane>
@@ -35,7 +36,7 @@
             </label>
           </div>
           <div class="col">
-            <button class="button button-positive custom-button">
+            <button class="button button-positive custom-button" ng-click="alarm()">
               nap
             </button>
           </div>

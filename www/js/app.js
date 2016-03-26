@@ -5,14 +5,14 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('nappy', ['ionic'])
 
-.controller('nappyCtrl', function($scope) {
+  .controller('nappyCtrl',['$scope', 'AlarmService', function($scope, AlarmService) {
 
-  $scope.alarm = function() {
-    alarmService.play();
-  }
-})
+    $scope.alarm = function() {
+      AlarmService.play();
+    }
+  }])
 
-.run(function($ionicPlatform) {
+  .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
