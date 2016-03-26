@@ -7,6 +7,9 @@ angular.module('nappy', ['ionic'])
 
 .controller('nappyCtrl', function($scope) {
 
+  $scope.alarm = function() {
+    alarmService.play();
+  }
 })
 
 .run(function($ionicPlatform) {
